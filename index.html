@@ -149,7 +149,7 @@
         }
 
         /* Responsive Image Styles */ 
-        .certification-container {
+        .project-certification-container {
             display: flex; 
             justify-content: center; 
             width: 100%; 
@@ -157,13 +157,19 @@
             margin: auto; 
         }
         
-        .responsive-image { 
+        .project-responsive-image { 
             width: 100%; 
             height: auto;
+            border-radius: 10px;
         }
 
         /* Hover Effect */
         .project:hover {
+            transform: translateY(-10px); /* Moves the project card up slightly */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+        }
+
+        .project-certification-container:hover {
             transform: translateY(-10px); /* Moves the project card up slightly */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
         }
@@ -348,8 +354,8 @@
         <br>
 
         <h2>Certifications</h2>
-        <div class="certification-container">
-            <img src="Images\Maven Certification.png" alt="MySQL Data Analysis Certification" class="responsive-image">
+        <div class="project-certification-container">
+            <img src="Images\Maven Certification.png" alt="MySQL Data Analysis Certification" class="project-responsive-image">
         </div>
 
     </section>
