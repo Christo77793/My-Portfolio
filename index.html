@@ -149,7 +149,16 @@
         }
 
         /* Responsive Image Styles */ 
-        .project-certification-container {
+
+        .certifications-gallery {
+            /* display: flex; */
+            justify-content: center;  
+            align-items: stretch;  /* Ensures all project cards stretch to the height of the tallest one */
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .certification-container {
             display: flex; 
             justify-content: center; 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -158,7 +167,7 @@
             margin: auto; 
         }
         
-        .project-responsive-image { 
+        .certifications-responsive-image { 
             width: 100%; 
             height: auto;
             border-radius: 10px;
@@ -170,7 +179,7 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
         }
 
-        .project-certification-container:hover {
+        .certification-container:hover {
             transform: translateY(-10px); /* Moves the project card up slightly */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
         }
@@ -188,6 +197,19 @@
             font-size: 1.1rem;
             margin-bottom: 10px;
             color: #A76B09;
+        }
+    
+        table {
+            border-collapse: collapse;
+            /* width: 300px; */
+            font-family: Arial, sans-serif;
+            /* font-size: 14px; */
+            margin: 0 auto; /* Centers the table */
+        }
+        th, td {
+            border: 1px solid #A76B09;
+            padding: 6px 10px;
+            text-align: left;
         }
 
         /* Contact Section */
@@ -286,16 +308,41 @@
     </header>
 
     <!-- Projects Section -->
+     <!-- 1095 x 719 -->
     <section id="projects" class="section">
         <h2>My Work</h2>
         <div class="projects-gallery">
+            <div class="project">
+                <img src="Images/Customer Inquiry Dashboard.png" alt="Customer Inquiry Dashboard">
+                <div class="project-info">
+                    <h3>Customer Inquiry Dashboard</h3>
+                    <p>A dashboard built on inquiry data to help management identify response times, patterns and create solutions to address high volume inquiries from key customers.</p>
+                    <p>Excel [Pivot Tables, Excel Charts]</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/PDF Pipeline Automation.png" alt="PDF Data Pipeline Automation">
+                <div class="project-info">
+                    <h3>PDF Data Pipeline</h3>
+                    <p>Streamlined access to public PDF data by building a pipeline to read and extract data and then centralizing the results in an Excel sheet. Eliminating manual search and improving team efficiency.</p>
+                    <p>Python [Camelot]</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/Azure Data Factory.png" alt="Copy and Ingestion Pipeline">
+                <div class="project-info">
+                    <h3>Copy & Ingestion Task</h3>
+                    <p>Created a pipeline in Azure Data Factory to copy & ingest data (extracted from Twitter) from a storage account and stores it into a SQL Database.</p>
+                    <p>Azure [Data Factory, SQL Database]</p>
+                </div>
+            </div>
             <div class="project">
                 <img src="Images\Performance Reports.png" alt="Performance Reports">
                 <div class="project-info">
                     <h3>Performance Reports</h3>
                     <p>Scraped KPI data from weekly reports and stored that data for ingestion. 
                         Developed interactive reports from that data for clear insights on performance.</p>
-                    <p>Tech Stack: Python, MySQL, Tableau</p>
+                    <p>Python, MySQL, Tableau</p>
                 </div>
             </div>
             <div class="project">
@@ -304,7 +351,7 @@
                     <h3>Event Recommender</h3>
                     <p>Developed a model for content recommendations that suggests preferred musical events to users.
                         Built using ANNs for personalized content-based filtering system.</p>
-                    <p>Tech Stack: Python [Pandas, Numpy, Sklearn, TensorFlow]</p>
+                    <p>Python [Pandas, Numpy, Sklearn, TensorFlow]</p>
                 </div>
             </div>
             <div class="project">
@@ -312,29 +359,29 @@
                 <div class="project-info">
                     <h3>Sentiments of the Psalmist</h3>
                     <p>Sentiment analysis on the book of Psalms as a school project.
-                        I might build this project along with my personal study on the Psalter.</p>
+                        Can be further developed along with my personal study on the Psalter.</p>
                     <p>Project available here: <a href="https://github.com/Christo77793/Sentiments-of-the-Psalms" target="_blank"><i class="fab fa-github"></i></a></p>
-                    <p>Tech Stack: Python [Pandas, Matplotlib, Textblob]</p>
+                    <p>Python [Pandas, Matplotlib, Textblob]</p>
                 </div>
             </div>
             <div class="project">
                 <img src="Images\Covid Dashboard.png" alt="Covid Dashboard">
                 <div class="project-info">
                     <h3>Covid Dashboard</h3>
-                    <p>A Covid dashboard project I built for my school project.
-                        The data source used was live and this simple dashboard shows important metrics from the data.</p>
+                    <p>A Covid dashboard project built for a school project.
+                        The data source used was live and this simple dashboard shows key metrics from the data.</p>
                     <p>Project available here: <a href="https://github.com/Christo77793/Covid19-Dashboard" target="_blank"><i class="fab fa-github"></i></a></p>
-                    <p>Tech Stack: Power BI</p>
+                    <p>Power BI</p>
                 </div>
             </div>
             <div class="project">
                 <img src="Images\The Living Word.png" alt="The Living Word">
                 <div class="project-info">
                     <h3>The Living Word</h3>
-                    <p>A program to read the Bible, to make notes, and to create bookmarks. GUI was made with PyQt5.
+                    <p>A program to read the Bible, to make notes, and to create bookmarks. GUI was made with QT Framework.
                         SQLite was used to for different features.</p>
                     <p>Project available here: <a href="https://github.com/Christo77793/The-Living-Word" target="_blank"><i class="fab fa-github"></i></a></p>
-                    <p>Tech Stack: Python [PyQt5], SQLite</p>
+                    <p>Python [PyQt5], SQLite</p>
                 </div>
             </div>
         </div>
@@ -343,20 +390,53 @@
     <!-- About Section -->
     <section id="about" class="section about">
         <h2>Technical Skills</h2>
-        <p>Skills I have developed through acomplishing my goals and academic endeavors</p>
-        <br>
-        <ul>
-            <li>Programming Languages: Python, SQL, C#, C++</li>
-            <li>Frameworks: PyTorch, PySpark, Django, Pandas, Numpy, Sklearn, PyQt5</li>
-            <li>Business Intelligence Tools: Tableau, Excel, Power BI</li>
-            <li>Command Line Tools: Linux Commands</li>
-        </ul>
+
+        <table>
+            <tr>
+                <td>Programming Languages:</td>
+                <td>Python, SQL</td>
+            </tr>
+            <tr>
+                <td>Data Analysis & Visualization:</td>
+                <td>Pandas, Tableau, Power BI</td>
+            </tr>
+            <tr>
+                <td>Automation & Workflow Tools:</td>
+                <td> Azure Data Factory, Power Automate, SharePoint</td>
+            </tr>
+            <tr>
+                <td>Productivity & Collaboration Tools:</td>
+                <td> MS365 Platform</td>
+            </tr>
+            <tr>
+                <td>Enterprise Systems:</td>
+                <td> Oracle ERP [BOM Management & Item Setup]</td>
+            </tr>
+            <tr>
+                <td>Version Control:</td>
+                <td> Git</td>
+            </tr>
+
+        </table>
 
         <br>
+        <br>
+        <br>
 
-        <h2>Certifications</h2>
-        <div class="project-certification-container">
-            <img src="Images\Maven Certification.png" alt="MySQL Data Analysis Certification" class="project-responsive-image">
+        <h2>Certificates & Badges</h2>
+
+        <div class="certifications-gallery">
+
+            <div class="certification-container">
+                <img src="Images/Intro to Snowflake SQL.png" alt="Intro to Snowflake SQL" class="certifications-responsive-image">
+            </div>
+
+            <br>
+
+            <div class="certification-container">
+                <img src="Images/Maven Certification.png" alt="MySQL Data Analysis Certification" class="certifications-responsive-image">
+            </div>
+
         </div>
 
     </section>
